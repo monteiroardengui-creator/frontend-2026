@@ -1,0 +1,134 @@
+body {
+    /*cor de fundo*/
+    background-color: rgb(158, 122, 168);
+    /*alterar fonte*/
+    font-family: 'Segue UI';
+    /*tamanho da fonte*/
+    font-size: 20px;
+    /*alinhar no centro*/
+    text-align: center;
+    /*cor da letra*/
+    color: black;
+background-image: url(https://static.vecteezy.com/system/resources/thumbnails/066/455/493/small/a-vast-deep-blue-studio-backdrop-with-textured-walls-and-a-smooth-floor-photo.jpeg);
+    
+    }
+
+    img{
+        border-radius: 15;
+        /*largura*/
+        width: 150px;
+        /*altura*/
+        height: 150px;
+        /*colocar borda*/
+        border: 1px solid gray;
+        /*colocar sombra*/
+        box-shadow: 2px 2px 5px gray
+    }
+
+    label{
+        /*deixa a etiqueta do campo ocupando largura*/
+        display: block;
+        font-weight: bold;
+        /*margem*/
+        margin: 15px;
+    }
+    input{
+        border-radius: 5px;
+        border: none;
+        /*altura*/
+        height: 25px;
+        /*largura*/
+        width: 40vw;
+        text-align: center;
+    }
+    input:focus{
+        outline: none;
+    }
+    input::placeholder{
+        color: gray;
+    }
+
+    /*button*/
+    #Cadastrar{
+        /*cor de fundo*/
+        background-color: cadetblue;
+        /*cor da letra*/
+        color: white;
+        /*espaçamento externo*/
+        margin: 50px;
+        /*espaçamento interno*/
+        padding: 10px;
+        bolder:none;
+        /*arredondar*/
+        border-radius: 10px;
+        }
+        button:hover{
+            background-color: black;
+            transition: 1s;
+            scale: 1.5;
+            rotate: calc(360deg);
+        }
+        /*Trabalhando com classes e ids*/
+        #id1{
+            background-color: green;
+        }
+        #id2{
+            background-color: rgb(0, 47, 255);
+        }
+        .classe{
+        background-color: goldenrod;
+        }
+
+        .tabela{
+            background-color: aqua;
+            color: goldenrod;
+            border: black;
+            margin: auto;
+        }
+       ul{
+          width: 130px;
+          /*centralizar*/
+          margin: auto;
+         }  
+
+         .cartão{
+           background-color: rgb(86, 6, 105);
+           max-width: 700px;
+           margin-top: 40px;
+           margin-bottom: 40px;
+           border-radius: 20px;
+
+    
+
+
+        
+
+        
+        
+
+    
+    
+     
+
+
+    
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+     }

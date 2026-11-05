@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Empréstimo Bancário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #5c0cb8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+        input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            display: none;
+        }
+        .approved {
+            background-color: #e3e9e9;
+            color: #155724;
+            border: 1px solid #2b5735;
+        }
+        .denied {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Simulador de Crédito</h2>
+    <form id="loanForm">
+        <div class="form-group">
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" required min="0">
+        </div>
+        <div class="form-group">
+            <label for="renda">Renda Mensal (R$):</label>
+            <input type="number" id="renda" step="0.01" required min="0">
+        </div>
+        <div class="form-group">
+            <label for="score">Score de Crédito:</label>
+            <input type="number" id="score" required min="0" max="1000">
+        </div>
+        <div class="form-group">
+            <label for="restricao">Possui restrições no nome (Nome Sujo)?</label>
+            <select id="restricao" required>
+                <option value="false">Não</option>
+                <option value="true">Sim</option>
+            </select>
+        </div>
+        <button type="button" onclick="analisarEmprestimo()">Verificar Aprovação</button>
+    </form>
+
+    <div id="result" class="result"></div>
+</div>
+
+<script>
+function analisarEmprestimo() {
+    // Coleta das entradas do algoritmo
+    const idade = parseInt(document.getElementById('idade').value);
+    const rendaMensal = parseFloat(document.getElementById('renda').value);
+    const scoreCredito = parseInt(document.getElementById('score').value);
+    const possuiRestricao = document.getElementById('restricao').value === "true";
+    
+    const resultDiv = document.getElementById('result');
+
+    // Validação básica de preenchimento
+    if (isNaN(idade) || isNaN(rendaMensal) || isNaN(scoreCredito)) {
+        alert("Por favor, preencha todos os campos corretamente.");
+        return;
+    }
+
+    // Lógica das Regras de Aprovação
+    let aprovado = false;
+
+    if (!possuiRestricao) {
+        const condicao1 = (idade >= 22 && rendaMensal > 3000);
+        const condicao2 = (scoreCredito > 800);
+
+        if (condicao1 || condicao2) {
+            aprovado = true;
+        }
+    }
+
+    // Exibição da Saída Esperada
+    resultDiv.style.display = "block";
+    if (aprovado) {
+        resultDiv.textContent = "Empréstimo Aprovado!";
+        resultDiv.className = "result approved";
+        console.log("Empréstimo Aprovado!");
+    } else {
+        resultDiv.textContent = "Empréstimo Negado.";
+        resultDiv.className = "result denied";
+        console.log("Empréstimo Negado.");
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: darkcyan;
+}
+
+/*personalização de produto individual*/
+.produto{
+    background-color: bisque;
+    /*espaçamento intermo*/
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.1em;
+}
+.produto img{
+    width: 70%;
+}
+.produto p {
+    color: blueviolet;
+ }
+ .produto .preco{ 
+    color: bisque;
+    font-weight: bold;
+
+}
+
+.produtos{
+    display: grid;
+    /*quantas colunas*/
+    grid-template-columns: 1fr 1fr 1fr;
+    /*espaçamento*/
+    gap: 10px;
+    width: 70;
+    margin: auto;
+}
+/*quando passar o mousse no card*/ 
+.produto:hover{
+    scale: 1.1;
+    transition: 1s;
+    box-shadow: 1px 1px 10px green;
+}
+
+/*adaptação para tablet/celular*/
+@media (max-width: 768px){
+
+    .produtos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        font-size: 10px;
+        width: 100%;

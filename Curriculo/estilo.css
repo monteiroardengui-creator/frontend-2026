@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+body{
+    margin: 0;
+    background-color: rgb(75, 60, 175);
+    color: rgb(161, 163, 25);
+    font-family:Playpen Sans;
+    /* text-align: center; */
+    margin-left: 300px;
+}
+.secao{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 70px 40px;
+    border-radius: 7px;
+}
+.inicio{
+    /*altura minima */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+img{
+    width: 220px;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 25px;
+}
+
+.inicio h2{
+    font-size: 50px;
+}
+
+.btn{
+    /*transforma link em um bloco*/
+    display: inline-block;
+    /*margem da direita*/
+    margin-right: 10px;
+    /*espaçamento interno da esquerda e de cima*/
+    padding: 13px 18px;
+    /*colocando borda*/
+    border: 1px solid black;
+    /*arredondando borda*/
+    border-radius: 8px;
+    /*negrito*/
+    font-weight: bold;
+    /*cor da letra*/
+    color:bisque
+    /*desativa estilo de link*/
+    text-decoration: none;
+}
+.btn-principal{
+    background-color: rgb(0, 174, 255); color: black;
+}
+/*configurando secao sobre*/
+.fundo{
+    background-color: rgb(215, 236, 250);
+    /*sem largura, ocupar todo espaço*/
+    max-width: none;
+    margin-left: 300px;
+}
+.sobre{
+    display: flex;
+    gap: 40px;
+}
+.sobre p {
+    width: 50%;
+}
+.lista-inf{
+    background: white;
+    border-left: 4px solid grey;
+    padding: 40px;
+    list-style: none;
+}
+.lista-inf li { margin-bottom: 12px; }
+
+/*personalizando experiencia*/
+.cartao{
+    margin-bottom: 18px;
+    padding: 24px;
+    /*criar borda*/
+    border-radius: 10px;
+    background: burlywood;
+    /*sombra*/
+    box-shadow: 2px 2px 10px rgb(189, 12, 12); 
+}
+.cartao h3{
+    margin-bottom: 5px;
+}
+.data{
+    color: black;
+    font-weight: bold;
+}
+.empresa{
+    color: coral
+}
+.grade-cartao{
+    display: grid;
+    /*quantas colunas você quer?*/
+    grid-template-columns: 1fr 1fr;
+    /*espaçamento*/
+    gap: 20px
+}
+
+.lista-habilidades{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+}
+.lista-habilidades li{
+    display: flex;
+    background: rgb(124, 60, 60);
+    padding: 20px;
+    border: 1px solid rgb(150, 149, 118);
+    border-radius: 13px;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+.lista-habilidades i{
+    color: blueviolet;
+    font-size: 28px;
+    box-shadow: 2px 2px 10px rgb(253, 41, 83);
+    border: 1px solid cornflowerblue;
+    border-radius: 28px;
+}
+.lista-habilidades Li:hover{
+    scale: 1.1;
+    transition: 1s;
+    background-color: brown;
+}
+.cartao:hover{
+    scale: 1.1;
+    transition: 1s;
+    background-color: antiquewhite;
+}
+/*personalizando redes*/
+.grade-redes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 14px;
+    margin-top: 25px;
+}
+.grade-redes a{
+    padding:20px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid rgb(233, 0, 233);
+    border-radius: 8px;
+    background-color: antiquewhite;
+    font-weight: bold;
+    text-align: center;
+}
+.grade-redes a i{ font-size: 40px;}
+#face{ color: rgb(185, 31, 31);}
+#insta{ color: rgb(187, 17, 68);}
+#linkedin{ color: burlywood;}
+#git{ color: blue;}
+#zap{ color: rgb(71, 151, 18);}
+
+.grade-redes a:hover{
+    box-shadow: 2px 2px 10px blueviolet;
+    scale: 1.1;
+    transition: 1s;
+}
+.lista-contato{
+    list-style: none;
+    padding: 0;
+}
+.lista-contato li{
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+.lista-contato i{
+    color: azure;
+    width: 30px;
+}
+footer{
+    padding: 20px;
+    background-color: red;
+    color: beige;
+    text-align: center;
+
+}
+.menu-lateral{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    /*pagar toda a altura da tela -  VH */
+    height: 100vh;
+    padding: 32px 24px;
+    background: rgb(210, 179, 245);
+    color: black;
+}
+.perfil{
+    text-align: center;
+    margin-bottom: 35px;
+}
+.avatar{
+    width: 85px;
+    height: 85px;
+    color: black;
+    border: 3px solid black;
+    border-radius: 20px;
+    margin: auto;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+.lista-menu{
+    padding: 0;
+    list-style: none;
+}
+.lista-menu a {
+    color: rgb(165, 101, 23);
+    text-decoration: none;
+    background: rgb(128, 36, 36);
+    display: block;
+    margin-bottom: 8px;
+    padding: 12px;
+    border-radius: 8px;
+}
+.lista-menu a:hover{
+    background-color: brown;
+    color: bisque;
+    transform: translateX(20px);
+    transition: 1s;
+}
+.lista-menu i {
+    font-size: 25px;
+    margin-right: 30px;
+}
+.botao-menu, .fundo-menu{
+    display: none;
+}
+
+
+
+
+
+/*MODO CELULAR ABAIXO*/
+@media(max-width: 1080px){
+     .botao-menu{
+        /* apareça o icone de menu */
+        display: block;
+        position: fixed;
+        right: 15px;
+        top: 15px;
+        padding: 12px 15px;
+        border: none;
+        background: black;
+        color: aquamarine;
+        font-size: 20px;
+        border-radius: 10px;
+        z-index: 5;
+     }
+    .menu-lateral{
+        transform: translateX(-100%);
+        transition: 0.5s;
+    }
+    /*classe que irá fazer o menu aparecer na tela*/
+    .menu-lateral.aberto{
+        transform: translateX(0);
+    }
+    .fundo-menu.visivel{
+    display:block;
+    position: fixed;
+    inset: 0;
+    background: #00000000;
+    }
+    .fundo{
+        margin: 0;
+    }
+    body{
+        margin: 0;
+    }
+
+
+    .inicio{
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 100px;
+        text-align: center;
+    }
+    .inicio h2{font-size: 30px;}
+    .sobre{ flex-direction: column;}
+    .sobre p {width: 100%;}
+    .grade-cartao{ grid-template-columns: 1fr; }
+    .lista-habilidades{
+    grid-template-columns: 1fr 1fr;
+    margin-left: -60px;
+    } 
+    .grade-redes{ grid-template-columns: 1fr 1fr;}
+    .secao{ padding: 40px 20px ;}
+ }
+
+
+
